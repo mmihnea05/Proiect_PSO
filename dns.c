@@ -5,10 +5,12 @@
 #include <arpa/inet.h>
 #include <sys/socket.h>
 #include <sys/time.h>
-
+#include <time.h>
+#include <stdarg.h>
 #define PORT 53
 #define BUF_SIZE 65536 
 #define EXTERNAL_DNS "8.8.8.8" 
+#define LOG_FILE "dns_server.log"
 
 // structura header DNS (12 bytes)
 #pragma pack(push, 1)
@@ -35,6 +37,29 @@ void decode_domain_name(unsigned char* reader, char* output) {
     }
     if (p > 0) output[p - 1] = '\0';
     else output[0] = '\0';
+}
+
+void write_log(const char *format, ...) {
+    va_list args;
+    
+    time_t now = time(NULL);
+    char time_str[20];
+    strftime(time_str, sizeof(time_str), "%Y-%m-%d %H:%M:%S", localtime(&now));
+
+    printf("[%s] ", time_str);
+    
+    va_start(args, format);
+    vprintf(format, args);
+    va_end(args);
+    
+    FILE *f = fopen(LOG_FILE, "a");
+    if (f != NULL) {
+        fprintf(f, "[%s] ", time_str);
+        va_start(args, format);
+        vfprintf(f, format, args);
+        va_end(args);
+        fclose(f);
+    }
 }
 
 int main() {
@@ -66,7 +91,7 @@ int main() {
     forward_addr.sin_port = htons(PORT); 
     inet_pton(AF_INET, EXTERNAL_DNS, &forward_addr.sin_addr);
 
-    printf("Server DNS asculta pe portul %d...\n", PORT);
+    write_log("Server DNS pornit si asculta pe portul %d...\n", PORT);
 
     // bucla infinita, asteptam clientii
     while (1) {
@@ -80,6 +105,8 @@ int main() {
 
         char client_ip[INET_ADDRSTRLEN];
         inet_ntop(AF_INET, &(client_addr.sin_addr), client_ip, INET_ADDRSTRLEN);
+        struct DNS_HEADER *dns = (struct DNS_HEADER*)buffer;
+        unsigned short req_id = ntohs(dns->id);
 
         unsigned char *qname = buffer + sizeof(struct DNS_HEADER);
         char domain_str[256];
@@ -88,13 +115,15 @@ int main() {
         // ignoram cererile inverse
         if (strstr(domain_str, "arpa") != NULL) continue;
 
-        printf("\ncerere de la %s -> %s\n", client_ip, domain_str);
+        unsigned char *qtype_ptr = qname + strlen((char*)qname) + 1;
+        unsigned short qtype = ntohs(*(unsigned short*)qtype_ptr);
+        write_log("Cerere [ID: %d] de la %s -> Domeniu: %s (QTYPE: %u)\n", req_id, client_ip, domain_str, qtype);
 
 
         // creare socket pt comunicarea cu exteriorul
         int ext_sock;
         if ((ext_sock = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP)) < 0) {
-            perror("Eroare creare socket extern");
+            write_log("Eroare creare socket extern pentru [ID: %d]\n", req_id);
             continue;
         }
 
@@ -118,7 +147,7 @@ int main() {
                                     (struct sockaddr*)&reply_addr, &reply_len);
 
         if (forward_bytes > 0) {
-            printf("am primit raspunsul de la serverul DNS extern (%d bytes).\n", forward_bytes);
+            write_log("Primit raspuns extern pentru [ID: %d] (%d bytes). Trimis inapoi la client.\n", req_id, forward_bytes);
 
             // trimitem raspunsul inapoi la client prin socketu-ul principal
             sendto(sockfd, buffer, forward_bytes, 0, 
@@ -126,7 +155,7 @@ int main() {
             
             printf("raspuns expediat inapoi catre client\n");
         } else {
-            printf("eroare: Google nu a raspuns in 3 secunde (Timeout).\n");
+            write_log("Timeout (3s): Serverul extern nu a raspuns pentru [ID: %d] (%s)\n", req_id, domain_str);
         }
 
         // inchidem socket-ul temporar pentru a elibera resursele
