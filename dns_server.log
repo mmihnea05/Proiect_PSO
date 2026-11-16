@@ -1,0 +1,76 @@
+[2026-11-12 07:55:29] Server DNS pornit si asculta pe portul 53...
+[2026-11-12 07:58:42] Server DNS pornit si asculta pe portul 53...
+[2026-11-12 07:59:00] Cerere [ID: 19096] de la 10.65.126.208 -> Domeniu: mta.ro (QTYPE: 1)
+[2026-11-12 07:59:00] Primit raspuns extern pentru [ID: 19096] (51 bytes). Trimis inapoi la client.
+[2026-11-12 07:59:20] Cerere [ID: 33574] de la 10.65.126.208 -> Domeniu: google.com (QTYPE: 1)
+[2026-11-12 07:59:20] Primit raspuns extern pentru [ID: 33574] (135 bytes). Trimis inapoi la client.
+[2026-11-16 02:58:24] Server DNS pornit si asculta pe portul 53...
+[2026-11-16 03:04:37] Server DNS pornit si asculta pe portul 53...
+[2026-11-16 03:05:35] Cerere [ID: 56270] de la 127.0.0.1 -> Domeniu: google.com (QTYPE: 1)
+[2026-11-16 03:05:35] Primit raspuns extern pentru [ID: 56270] (135 bytes). Trimis inapoi la client.
+[2026-11-16 03:05:40] Cerere [ID: 56270] de la 127.0.0.1 -> Domeniu: google.com (QTYPE: 1)
+[2026-11-16 03:05:40] Primit raspuns extern pentru [ID: 56270] (135 bytes). Trimis inapoi la client.
+[2026-11-16 03:05:45] Cerere [ID: 56270] de la 127.0.0.1 -> Domeniu: google.com (QTYPE: 1)
+[2026-11-16 03:05:45] Primit raspuns extern pentru [ID: 56270] (135 bytes). Trimis inapoi la client.
+[2026-11-16 03:12:19] Server DNS pornit si asculta pe portul 53...
+[2026-11-16 03:12:22] Cerere [ID: 38661] de la 10.50.255.43 -> Domeniu: mta.ro (QTYPE: 1)
+[2026-11-16 03:12:22] Primit raspuns extern pentru [ID: 38661] (51 bytes). Trimis inapoi la client.
+[2026-11-16 03:21:13] Server DNS pornit si asculta pe portul 53...
+[2026-11-16 03:21:21] Cerere [ID: 31919] de la 127.0.0.1 -> Domeniu: google.com (QTYPE: 1)
+[2026-11-16 03:21:21] Primit raspuns extern pentru [ID: 31919] (135 bytes). Trimis inapoi la client.
+[2026-11-16 03:23:26] Server DNS pornit si asculta pe portul 53...
+[2026-11-16 03:23:29] Cerere [ID: 11660] de la 127.0.0.1 -> Domeniu: google.com (QTYPE: 1)
+[2026-11-16 03:23:29] Primit raspuns extern pentru [ID: 11660] (135 bytes). Trimis inapoi la client.
+[2026-11-16 03:23:30] Cerere [ID: 52953] de la 127.0.0.1 -> Domeniu: google.com (QTYPE: 1)
+[2026-11-16 03:23:30] Primit raspuns extern pentru [ID: 52953] (135 bytes). Trimis inapoi la client.
+[2026-11-16 03:23:31] Cerere [ID: 36537] de la 127.0.0.1 -> Domeniu: google.com (QTYPE: 1)
+[2026-11-16 03:23:31] Primit raspuns extern pentru [ID: 36537] (135 bytes). Trimis inapoi la client.
+[2026-11-16 03:32:41] Server DNS pornit si asculta pe portul 53...
+[2026-11-16 03:32:45] Cerere [ID: 4641] de la 10.50.255.208 -> Domeniu: mta.ro (QTYPE: 1)
+[2026-11-16 03:32:45] Primit raspuns extern pentru [ID: 4641] (51 bytes). Trimis inapoi la client.
+[2026-11-16 03:40:28] Server DNS pornit si asculta pe portul 53...
+[2026-11-16 03:40:44] Cerere [ID: 9849] de la 10.50.255.208 -> Domeniu: mta.ro (QTYPE: 1)
+[2026-11-16 03:40:44] Primit raspuns extern pentru [ID: 9849] (51 bytes). Trimis inapoi la client.
+[2026-11-16 04:25:25] Server DNS pornit si asculta pe portul 53...
+[2026-11-16 04:25:46] Cerere [ID: 9445] de la 127.0.0.1 -> Domeniu: mta.ro (QTYPE: 1)
+[2026-11-16 04:25:46] Nu este in fisier. Forward catre 8.8.8.8 pentru [ID: 9445]
+[2026-11-16 04:25:46] Primit raspuns extern pentru [ID: 9445] (51 bytes). Trimis inapoi la client.
+[2026-11-16 04:25:46] Salvata adresa noua in cache: mta.ro -> 192.124.249.79
+[2026-11-16 04:25:52] Cerere [ID: 20276] de la 127.0.0.1 -> Domeniu: mta.ro (QTYPE: 1)
+[2026-11-16 04:25:52] Nu este in fisier. Forward catre 8.8.8.8 pentru [ID: 20276]
+[2026-11-16 04:25:52] Primit raspuns extern pentru [ID: 20276] (51 bytes). Trimis inapoi la client.
+[2026-11-16 04:25:52] Salvata adresa noua in cache: mta.ro -> 192.124.249.79
+[2026-11-16 04:25:54] Cerere [ID: 19148] de la 127.0.0.1 -> Domeniu: mta.ro (QTYPE: 1)
+[2026-11-16 04:25:54] Interceptat [ID: 19148]! Rezolvam LOCAL in IP: 192.124.249.79
+[2026-11-16 04:25:54] Raspuns LOCAL expediat catre client pentru [ID: 19148]
+[2026-11-16 04:25:55] Cerere [ID: 24914] de la 127.0.0.1 -> Domeniu: mta.ro (QTYPE: 1)
+[2026-11-16 04:25:55] Interceptat [ID: 24914]! Rezolvam LOCAL in IP: 192.124.249.79
+[2026-11-16 04:25:55] Raspuns LOCAL expediat catre client pentru [ID: 24914]
+[2026-11-16 04:25:56] Cerere [ID: 50080] de la 127.0.0.1 -> Domeniu: mta.ro (QTYPE: 1)
+[2026-11-16 04:25:56] Interceptat [ID: 50080]! Rezolvam LOCAL in IP: 192.124.249.79
+[2026-11-16 04:25:56] Raspuns LOCAL expediat catre client pentru [ID: 50080]
+[2026-11-16 04:25:56] Cerere [ID: 16608] de la 127.0.0.1 -> Domeniu: mta.ro (QTYPE: 1)
+[2026-11-16 04:25:56] Interceptat [ID: 16608]! Rezolvam LOCAL in IP: 192.124.249.79
+[2026-11-16 04:25:56] Raspuns LOCAL expediat catre client pentru [ID: 16608]
+[2026-11-16 04:25:56] Cerere [ID: 50567] de la 127.0.0.1 -> Domeniu: mta.ro (QTYPE: 1)
+[2026-11-16 04:25:56] Interceptat [ID: 50567]! Rezolvam LOCAL in IP: 192.124.249.79
+[2026-11-16 04:25:56] Raspuns LOCAL expediat catre client pentru [ID: 50567]
+[2026-11-16 04:25:57] Cerere [ID: 42862] de la 127.0.0.1 -> Domeniu: mta.ro (QTYPE: 1)
+[2026-11-16 04:25:57] Interceptat [ID: 42862]! Rezolvam LOCAL in IP: 192.124.249.79
+[2026-11-16 04:25:57] Raspuns LOCAL expediat catre client pentru [ID: 42862]
+[2026-11-16 04:25:57] Cerere [ID: 57771] de la 127.0.0.1 -> Domeniu: mta.ro (QTYPE: 1)
+[2026-11-16 04:25:57] Interceptat [ID: 57771]! Rezolvam LOCAL in IP: 192.124.249.79
+[2026-11-16 04:25:57] Raspuns LOCAL expediat catre client pentru [ID: 57771]
+[2026-11-16 04:25:59] Cerere [ID: 47614] de la 127.0.0.1 -> Domeniu: mta.ro (QTYPE: 1)
+[2026-11-16 04:25:59] Interceptat [ID: 47614]! Rezolvam LOCAL in IP: 192.124.249.79
+[2026-11-16 04:25:59] Raspuns LOCAL expediat catre client pentru [ID: 47614]
+[2026-11-16 04:26:15] Cerere [ID: 29854] de la 127.0.0.1 -> Domeniu: google.com (QTYPE: 1)
+[2026-11-16 04:26:15] Nu este in fisier. Forward catre 8.8.8.8 pentru [ID: 29854]
+[2026-11-16 04:26:15] Primit raspuns extern pentru [ID: 29854] (135 bytes). Trimis inapoi la client.
+[2026-11-16 04:26:15] Salvata adresa noua in cache: google.com -> 142.251.13.139
+[2026-11-16 04:26:16] Cerere [ID: 25492] de la 127.0.0.1 -> Domeniu: google.com (QTYPE: 1)
+[2026-11-16 04:26:16] Interceptat [ID: 25492]! Rezolvam LOCAL in IP: 142.251.13.139
+[2026-11-16 04:26:16] Raspuns LOCAL expediat catre client pentru [ID: 25492]
+[2026-11-16 04:26:16] Cerere [ID: 37373] de la 127.0.0.1 -> Domeniu: google.com (QTYPE: 1)
+[2026-11-16 04:26:16] Interceptat [ID: 37373]! Rezolvam LOCAL in IP: 142.251.13.139
+[2026-11-16 04:26:16] Raspuns LOCAL expediat catre client pentru [ID: 37373]
